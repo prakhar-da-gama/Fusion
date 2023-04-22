@@ -46,6 +46,7 @@ urlpatterns = [
     url(r'^leave/', include('applications.leave.urls')),
     url(r'^placement/', include('applications.placement_cell.urls')),
     url(r'^filetracking/', include('applications.filetracking.urls')),
+
     url(r'^spacs/', include('applications.scholarships.urls')),
     url(r'^visitorhostel/', include('applications.visitor_hostel.urls')),
     url(r'^office/', include('applications.office_module.urls')),
@@ -60,4 +61,9 @@ urlpatterns = [
     url(r'^income-expenditure/', include('applications.income_expenditure.urls')),
     url(r'^hr2/', include('applications.hr2.urls')),
     url(r'^recruitment/', include('applications.recruitment.urls')),
+
+    #API
+    
+    #File-Tracking
+    url(r'^filetracking/api/', include('applications.filetracking.api.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
